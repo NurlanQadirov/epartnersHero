@@ -15,7 +15,7 @@
     />
     <style>
       :root {
-        --primary: #c8102e;
+        --primary: #ec1f28;
         --dark-gray: #333333;
         --light-gray: #f8f8f8;
         --white: #ffffff;
@@ -344,7 +344,7 @@
 
       .cta-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
+        box-shadow: 0 5px 15px rgba(236, 31, 40, 0.4);
       }
 
       /* About Section */
@@ -438,7 +438,7 @@
       .hexagon.active {
         transform: scale(1.8);
         z-index: 1000;
-        box-shadow: 0 20px 60px rgba(200, 16, 46, 0.5);
+        box-shadow: 0 20px 60px rgba(236, 31, 40, 0.5);
         background: var(--primary);
         clip-path: none;
         border-radius: 20px;
@@ -625,21 +625,21 @@
         background-color: var(--white);
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, background-color 0.3s ease,
-          box-shadow 0.3s ease;
+        transition: transform 0.5s ease, background-color 0.5s ease,
+          box-shadow 0.5s ease, color 0.5s ease;
       }
 
       .benefit:hover {
         transform: scale(1.05);
         background-color: var(--primary);
-        box-shadow: 0 10px 25px rgba(200, 16, 46, 0.3);
+        box-shadow: 0 10px 25px rgba(236, 31, 40, 0.3);
       }
 
       .benefit-icon {
         font-size: 30px;
         color: var(--primary);
         margin-bottom: 15px;
-        transition: color 0.3s ease;
+        transition: color 0.5s ease;
       }
 
       .benefit-title {
@@ -650,13 +650,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: color 0.3s ease;
+        transition: color 0.5s ease;
       }
 
       .benefit-description {
         font-size: 14px;
         color: #666;
-        transition: color 0.3s ease;
+        transition: color 0.5s ease;
       }
 
       .benefit:hover .benefit-icon,
@@ -1001,9 +1001,9 @@
             background-image: url('https://images.unsplash.com/photo-1529539795054-3c162a4d8298?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
-        </div>
+      </div>
       <div class="hero-content">
-        <h1 data-key="hero-title">Simplify. Strategize. Succeed</h1>
+        <h1 data-key="hero-title"></h1>
         <p data-key="hero-text">
           Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı,
           inteqrasiya olunmuş həllər təqdim edirik.
@@ -1294,20 +1294,10 @@
     </footer>
 
     <script>
-      // Hero Slider Script
-      document.addEventListener("DOMContentLoaded", function () {
-        const slides = document.querySelectorAll(".hero-slide");
-        let currentSlide = 0;
-        const slideInterval = 5000; // 5 saniyə
-
-        function nextSlide() {
-          slides[currentSlide].classList.remove("active");
-          currentSlide = (currentSlide + 1) % slides.length;
-          slides[currentSlide].classList.add("active");
-        }
-
-        setInterval(nextSlide, slideInterval);
-      });
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".hero-slide");
+      const heroTitleElement = document.querySelector('[data-key="hero-title"]');
+      const slideInterval = 5000; // 5 saniyə
 
       const translations = {
         az: {
@@ -1315,6 +1305,14 @@
           "nav-services": "Xidmətlər",
           "nav-why": "Nə Üçün Biz",
           "nav-contact": "Əlaqə",
+          "hero-title": [
+            "Sadələşdirin. Strategiya qurun. Uğur qazanın.",
+            "Gələcəyi Formalaşdıran İnnovativ Həllər",
+            "Məlumatdan Dəyərə: Analitik yanaşma",
+            "Effektiv Strategiyalarla Rəqabət Üstünlüyü",
+            "Biznesiniz üçün Etibarlı Tərəfdaşlıq",
+            "Texnologiya ilə Böyüməni Sürətləndirin",
+          ],
           "hero-text":
             "Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı, inteqrasiya olunmuş həllər təqdim edirik.",
           "hero-button": "Bizimlə İşləyin",
@@ -1418,7 +1416,14 @@
           "nav-services": "Services",
           "nav-why": "Why Choose Us",
           "nav-contact": "Contact",
-          "hero-title": "Simplify. Strategize. Succeed",
+          "hero-title": [
+            "Simplify. Strategize. Succeed.",
+            "Innovative Solutions Shaping the Future",
+            "From Data to Value: An Analytical Approach",
+            "Competitive Advantage with Effective Strategies",
+            "Reliable Partnership for Your Business",
+            "Accelerating Growth with Technology",
+          ],
           "hero-text":
             "We deliver smart, integrated solutions across IT, Marketing, Law, Finance, and Procurement.",
           "hero-button": "Work With Us",
@@ -1522,6 +1527,14 @@
           "nav-services": "Услуги",
           "nav-why": "Почему выбирают нас",
           "nav-contact": "Контакты",
+          "hero-title": [
+            "Упрощайте. Разрабатывайте стратегию. Преуспевайте.",
+            "Инновационные решения, формирующие будущее",
+            "От данных к ценности: аналитический подход",
+            "Конкурентное преимущество с эффективными стратегиями",
+            "Надежное партнерство для вашего бизнеса",
+            "Ускорение роста с помощью технологий",
+          ],
           "hero-text":
             "Мы предоставляем умные, интегрированные решения в области ИТ, маркетинга, права, финансов и закупок.",
           "hero-button": "Работать с нами",
@@ -1624,6 +1637,28 @@
 
       let currentLanguage = "az";
 
+      // Hero Slider Script
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateHeroTitle() {
+            if (heroTitleElement) {
+                heroTitleElement.textContent = translations[currentLanguage]["hero-title"][currentSlide];
+            }
+        }
+        
+        function nextSlide() {
+          slides[currentSlide].classList.remove("active");
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add("active");
+          updateHeroTitle();
+        }
+        
+        // Initial title set
+        updateHeroTitle();
+
+        setInterval(nextSlide, slideInterval);
+      });
+
+
       function toggleLanguageDropdown() {
         const dropdown = document.querySelector(".language-dropdown");
         const options = document.getElementById("languageOptions");
@@ -1655,7 +1690,9 @@
         elements.forEach((element) => {
           const key = element.getAttribute("data-key");
           if (translations[lang] && translations[lang][key]) {
-            if (element.classList.contains("hexagon-description")) {
+            if(key === 'hero-title') {
+                element.textContent = translations[lang][key][currentSlide];
+            } else if (element.classList.contains("hexagon-description")) {
               element.innerHTML = translations[lang][key];
             } else {
               element.textContent = translations[lang][key];
