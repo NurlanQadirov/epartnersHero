@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Partners</title>
     <link rel="icon" type="image/png" href="./logoTitle.png" />
+
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1589994965851-a8f8bf2c53a2?q=80&w=2070&auto=format&fit=crop">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop">
+
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,7 +20,7 @@
     />
     <style>
       :root {
-        --primary: #ec1f28;
+        --primary: #ec1f28; /* Brendbuka uyğun rəng kodu */
         --dark-gray: #333333;
         --light-gray: #f8f8f8;
         --white: #ffffff;
@@ -257,17 +262,18 @@
 
       /* Hero Section Styling */
       .hero {
-        position: relative; /* Needed for positioning slider and content */
-        height: 100vh; /* Full viewport height */
+        position: relative;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        overflow: hidden; /* Hide overflowing parts of slider images */
-        color: var(--white); /* Text color on top of the slider */
+        overflow: hidden;
+        color: var(--white);
+        /* Həll: Şəkil yüklənənə qədər kəskin ağ fonun qarşısını almaq üçün tünd rəng */
+        background-color: #1a1a1a;
       }
 
-      /* Slider Container */
       .hero-slider {
         position: absolute;
         top: 0;
@@ -277,7 +283,6 @@
         z-index: 1;
       }
 
-      /* Individual Slides */
       .hero-slide {
         position: absolute;
         top: 0;
@@ -287,7 +292,7 @@
         background-size: cover;
         background-position: center;
         opacity: 0;
-        transition: opacity 1.5s ease-in-out; /* Animation for fade effect */
+        transition: opacity 1.5s ease-in-out;
         z-index: 1;
       }
 
@@ -295,22 +300,9 @@
         opacity: 1;
       }
 
-      /* Overlay for better text readability */
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-        z-index: 2;
-      }
-
-      /* Hero Content styling */
       .hero-content {
         position: relative;
-        z-index: 3; /* Ensure content is above the slider and overlay */
+        z-index: 3;
         padding: 0 20px;
       }
 
@@ -318,14 +310,16 @@
         font-size: 48px;
         font-weight: 700;
         margin-bottom: 20px;
-        color: var(--white); /* Ensuring title is white */
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
       }
 
       .hero-content p {
         font-size: 18px;
         max-width: 700px;
         margin: 0 auto 40px;
-        color: var(--white); /* Ensuring text is white */
+        color: var(--white);
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
       }
 
       .cta-button {
@@ -968,46 +962,43 @@
         <div
           class="hero-slide active"
           style="
-            background-image: url('https://images.unsplash.com/photo-1505664194779-8be2242db0f6?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1589994965851-a8f8bf2c53a2?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
         <div
           class="hero-slide"
           style="
-            background-image: url('https://images.unsplash.com/photo-1588376174742-8176b6c80529?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
         <div
           class="hero-slide"
           style="
-            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1579532582937-16c1179a3359?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
         <div
           class="hero-slide"
           style="
-            background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1554224155-16954405a255?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
         <div
           class="hero-slide"
           style="
-            background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');
           "
         ></div>
         <div
           class="hero-slide"
           style="
-            background-image: url('https://images.unsplash.com/photo-1529539795054-3c162a4d8298?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=2070&auto=format&fit=crop');
           "
         ></div>
       </div>
       <div class="hero-content">
         <h1 data-key="hero-title"></h1>
-        <p data-key="hero-text">
-          Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı,
-          inteqrasiya olunmuş həllər təqdim edirik.
-        </p>
+        <p data-key="hero-text"></p>
         <a href="#footer" class="cta-button" data-key="hero-button"
           >Bizimlə İşləyin</a
         >
@@ -1297,7 +1288,9 @@
       let currentSlide = 0;
       const slides = document.querySelectorAll(".hero-slide");
       const heroTitleElement = document.querySelector('[data-key="hero-title"]');
-      const slideInterval = 5000; // 5 saniyə
+      // DƏYİŞİKLİK: Alt mətn üçün element əlavə edildi
+      const heroTextElement = document.querySelector('[data-key="hero-text"]');
+      const slideInterval = 5000;
 
       const translations = {
         az: {
@@ -1306,107 +1299,53 @@
           "nav-why": "Nə Üçün Biz",
           "nav-contact": "Əlaqə",
           "hero-title": [
-            "Sadələşdirin. Strategiya qurun. Uğur qazanın.",
-            "Gələcəyi Formalaşdıran İnnovativ Həllər",
-            "Məlumatdan Dəyərə: Analitik yanaşma",
-            "Effektiv Strategiyalarla Rəqabət Üstünlüyü",
-            "Biznesiniz üçün Etibarlı Tərəfdaşlıq",
-            "Texnologiya ilə Böyüməni Sürətləndirin",
+            "Hüquqi Dəstək, Etibarlı Gələcək",
+            "Doğru Komanda, Uğurlu Biznes",
+            "Effektiv Satınalma, Maksimum Qənaət",
+            "Maliyyə Həlləri ilə Böyüməni Təmin Edin",
+            "Brendinizi Rəqəmsal Zirvələrə Daşıyın",
+            "Texnoloji Üstünlüklə Rəqabətdə Öndə Olun",
           ],
-          "hero-text":
-            "Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı, inteqrasiya olunmuş həllər təqdim edirik.",
+          // DƏYİŞİKLİK: hero-text statik mətndən dinamik massivə çevrildi
+          "hero-text": [
+            "Biznesinizi hüquqi risklərdən qoruyur, qanunvericiliyə tam uyğun fəaliyyətinizə zəmanət veririk.",
+            "Şirkətinizin ən dəyərli aktivini – insan resurslarını effektiv idarə etməyə kömək edirik.",
+            "Təchizat zəncirinizi optimallaşdıraraq xərclərinizi azaldır və səmərəliliyi artırırıq.",
+            "Düzgün maliyyə strategiyaları ilə şirkətinizin maliyyə sağlamlığını və davamlı gəlirini təmin edirik.",
+            "Hədəf auditoriyanıza çatmaq və satışlarınızı artırmaq üçün kreativ marketinq strategiyaları təqdim edirik.",
+            "Rəqəmsal transformasiya ilə biznes proseslərinizi modernləşdirir və rəqabət gücünüzü artırırıq.",
+          ],
           "hero-button": "Bizimlə İşləyin",
           "about-title": "Haqqımızda",
           "about-text":
             "E-Partners – biznesinizin hər mərhələsində yanınızda olaraq 360 dərəcə konsaltinq həllərini təqdim edən şirkətdir. Biz maliyyə, marketinq, hüquq, insan resursları, informasiya texnologiyaları, satınalma və təlim sahələrində yüksək ixtisaslaşmış xidmətlər təqdim edirik. Məqsədimiz: Müştərilərimizə effektiv strategiyalar təqdim etməklə onların rəqabət üstünlüyünü artırmaq və davamlı inkişafı təmin etməkdir. Dəyərlərimiz: Peşəkarlıq, etibarlılıq, çeviklik və nəticəyə fokuslanmaq",
           "services-title": "Xidmətlərimiz",
           "service-law": "Hüquq",
-          "service-law-desc": `
-        <ul>
-            <li>Korporativ hüquq xidmətləri</li>
-            <li>Müqavilələrin hazırlanması və hüquqi təhlili</li>
-            <li>Vergi və gömrük prosedurlarında yardım</li>
-            <li>Əmək və Ailə qanunvericiliyi üzrə məsləhət xidmətləri</li>
-            <li>Mübahisələrin həlli və hüquqi risklərin idarə olunması</li>
-            <li>Lisenziyalaşdırma və dövlət orqanları ilə işlərin aparılması</li>
-            <li>Məhkəmələrdə təmsilçilik</li>
-        </ul>
-    `,
+          "service-law-desc": `<ul><li>Korporativ hüquq xidmətləri</li><li>Müqavilələrin hazırlanması və hüquqi təhlili</li><li>Vergi və gömrük prosedurlarında yardım</li><li>Əmək və Ailə qanunvericiliyi üzrə məsləhət xidmətləri</li><li>Mübahisələrin həlli və hüquqi risklərin idarə olunması</li><li>Lisenziyalaşdırma və dövlət orqanları ilə işlərin aparılması</li><li>Məhkəmələrdə təmsilçilik</li></ul>`,
           "service-hr": "İnsan Resursları",
-          "service-hr-desc": `
-        <ul>
-            <li>İşə qəbul və namizəd seçimi</li>
-            <li>Perfomansın idarə edilməsi</li>
-            <li>Komanda motivasiyası və liderlik proqramları</li>
-            <li>İR Audit və strukturun qurulması</li>
-            <li>Daxili prosedurların hazırlanması</li>
-        </ul>
-    `,
+          "service-hr-desc": `<ul><li>İşə qəbul və namizəd seçimi</li><li>Perfomansın idarə edilməsi</li><li>Komanda motivasiyası və liderlik proqramları</li><li>İR Audit və strukturun qurulması</li><li>Daxili prosedurların hazırlanması</li></ul>`,
           "service-procurement": "Satınalma",
-          "service-procurement-desc": `
-        <ul>
-            <li>Uyğun satınalma müsabiqəsinin seçilməsi</li>
-            <li>Uyğunluq sənədələrinin hazırlanması və portala yüklənməsi</li>
-            <li>Müvafiq sorğuların verilməsi</li>
-            <li>Şikayətin verilməsi və izlənməsi</li>
-            <li>Birgə fəaliyyət üçün müvafiq bölgülü sənədlərin hazırlanması</li>
-            <li>Müqavilənin hazırlanması</li>
-        </ul>
-    `,
+          "service-procurement-desc": `<ul><li>Uyğun satınalma müsabiqəsinin seçilməsi</li><li>Uyğunluq sənədələrinin hazırlanması və portala yüklənməsi</li><li>Müvafiq sorğuların verilməsi</li><li>Şikayətin verilməsi və izlənməsi</li><li>Birgə fəaliyyət üçün müvafiq bölgülü sənədlərin hazırlanması</li><li>Müqavilənin hazırlanması</li></ul>`,
           "service-finance": "Maliyyə",
-          "service-finance-desc": `
-        <ul>
-            <li>Büdcələmə və maliyyə planlaşdırılması</li>
-            <li>Vergi planlaşdırılması və audit</li>
-            <li>İnvestisiya və risklərin idarə olunması</li>
-            <li>Maliyyə hesabatlarının təhlili</li>
-            <li>Nəzarət sistemlərinin qurulması</li>
-            <li>Startap və KOB-lar üçün maliyyə modelləri</li>
-        </ul>
-    `,
+          "service-finance-desc": `<ul><li>Büdcələmə və maliyyə planlaşdırılması</li><li>Vergi planlaşdırılması və audit</li><li>İnvestisiya və risklərin idarə olunması</li><li>Maliyyə hesabatlarının təhlili</li><li>Nəzarət sistemlərinin qurulması</li><li>Startap və KOB-lar üçün maliyyə modelləri</li></ul>`,
           "service-marketing": "Marketinq",
-          "service-marketing-desc": `
-        <ul>
-            <li>Marketinq plan və strategiyaların yazılması</li>
-            <li>Brend inkişafı və mövqeləndirmə</li>
-            <li>Sosial media idarəçiliyi və reklam kampaniyaları</li>
-            <li>Kontent marketinqi və SEO xidmətləri</li>
-            <li>Müştəri təcrübəsinin təkmilləşdirilməsi</li>
-            <li>Analitik və performans ölçümləri</li>
-        </ul>
-    `,
+          "service-marketing-desc": `<ul><li>Marketinq plan və strategiyaların yazılması</li><li>Brend inkişafı və mövqeləndirmə</li><li>Sosial media idarəçiliyi və reklam kampaniyaları</li><li>Kontent marketinqi və SEO xidmətləri</li><li>Müştəri təcrübəsinin təkmilləşdirilməsi</li><li>Analitik və performans ölçümləri</li></ul>`,
           "service-it": "IT",
-          "service-it-desc": `
-        <ul>
-            <li>İT strategiya və transformasiya xidmətləri</li>
-            <li>Sistem inteqrasiyası və infrastruktur quruculuğu</li>
-            <li>Kibertəhlükəsizlik həlləri</li>
-            <li>Bulud texnologiyaları və verilənlərin idarə olunması</li>
-            <li>Proqram təminatı və avtomatlaşdırma həlləri</li>
-            <li>Texniki audit və İT risklərin qiymətləndirilməsi</li>
-        </ul>
-    `,
+          "service-it-desc": `<ul><li>İT strategiya və transformasiya xidmətləri</li><li>Sistem inteqrasiyası və infrastruktur quruculuğu</li><li>Kibertəhlükəsizlik həlləri</li><li>Bulud texnologiyaları və verilənlərin idarə olunması</li><li>Proqram təminatı və avtomatlaşdırma həlləri</li><li>Texniki audit və İT risklərin qiymətləndirilməsi</li></ul>`,
           "why-title": "Nə Üçün Bizi Seçməlisiniz",
           "benefit1-title": "Çevik və Etibarlı",
-          "benefit1-desc":
-            "Biz dəyişən şəraitə tez uyğunlaşırıq, eyni zamanda ardıcıl keyfiyyət və performans saxlayırıq.",
+          "benefit1-desc": "Biz dəyişən şəraitə tez uyğunlaşırıq, eyni zamanda ardıcıl keyfiyyət və performans saxlayırıq.",
           "benefit2-title": "Sənaye Təcrübəsi",
-          "benefit2-desc":
-            "Komandamız müxtəlif sənaye və sektorlarda onilliklər təcrübəsini birləşdirir.",
+          "benefit2-desc": "Komandamız müxtəlif sənaye və sektorlarda onilliklər təcrübəsini birləşdirir.",
           "benefit3-title": "Fərdiləşdirilmiş Həllər",
-          "benefit3-desc":
-            "Biz sizin unikal çətinliklərinizə və imkanlarınıza ünvanlanmış fərdi strategiyalar yaradırıq.",
+          "benefit3-desc": "Biz sizin unikal çətinliklərinizə və imkanlarınıza ünvanlanmış fərdi strategiyalar yaradırıq.",
           "benefit4-title": "Müştəri Mərkəzli Yanaşma",
-          "benefit4-desc":
-            "Sizin müvəffəqiyyətiniz bizim prioritetimizdir. Biz etimad və nəticələr əsasında davamlı tərəfdaşlıq qururuq.",
+          "benefit4-desc": "Sizin müvəffəqiyyətiniz bizim prioritetimizdir. Biz etimad və nəticələr əsasında davamlı tərəfdaşlıq qururuq.",
           "benefit5-title": "İnnovasiya və Texnologiya",
-          "benefit5-desc":
-            "Ən son texnologiyalar və innovativ həllərlə biznesinizi gələcəyə hazırlayırıq.",
+          "benefit5-desc": "Ən son texnologiyalar və innovativ həllərlə biznesinizi gələcəyə hazırlayırıq.",
           "benefit6-title": "24/7 Dəstək",
-          "benefit6-desc":
-            "Hər zaman yanınızdayıq və suallarınıza cavab verməyə hazırıq.",
-          "footer-desc":
-            "Müvəffəqiyyət və böyümə həyata keçirən inteqrasiya edilmiş biznes həlləri təqdim edirik.",
+          "benefit6-desc": "Hər zaman yanınızdayıq və suallarınıza cavab verməyə hazırıq.",
+          "footer-desc": "Müvəffəqiyyət və böyümə həyata keçirən inteqrasiya edilmiş biznes həlləri təqdim edirik.",
           "footer-links": "Sürətli Keçidlər",
           "footer-contact": "Əlaqə",
           "footer-copyright": "© 2025 E-Partners. Bütün hüquqlar qorunur.",
@@ -1417,107 +1356,51 @@
           "nav-why": "Why Choose Us",
           "nav-contact": "Contact",
           "hero-title": [
-            "Simplify. Strategize. Succeed.",
-            "Innovative Solutions Shaping the Future",
-            "From Data to Value: An Analytical Approach",
-            "Competitive Advantage with Effective Strategies",
-            "Reliable Partnership for Your Business",
-            "Accelerating Growth with Technology",
+            "Legal Support, Secure Future",
+            "The Right Team, A Successful Business",
+            "Effective Procurement, Maximum Savings",
+            "Ensure Growth with Financial Solutions",
+            "Carry Your Brand to Digital Summits",
+            "Stay Ahead with Technological Advantage",
           ],
-          "hero-text":
-            "We deliver smart, integrated solutions across IT, Marketing, Law, Finance, and Procurement.",
+          "hero-text": [
+              "We protect your business from legal risks, ensuring full compliance with legislation.",
+              "We help effectively manage your company's most valuable asset - human resources.",
+              "We reduce your costs and increase efficiency by optimizing your supply chain.",
+              "We ensure your company's financial health and sustainable income with the right financial strategies.",
+              "We provide creative marketing strategies to reach your target audience and increase your sales.",
+              "We modernize your business processes and increase your competitive power with digital transformation."
+          ],
           "hero-button": "Work With Us",
           "about-title": "About Us",
-          "about-text":
-            "E-Partners is a company that stands by your business at every stage, offering comprehensive 360-degree consulting solutions. We deliver highly specialized services in the fields of finance, marketing, law, human resources, information technology, procurement, and training. Our mission: To enhance our clients' competitive advantage and ensure sustainable growth by offering effective strategies tailored to their needs. Our core values: Professionalism, reliability, agility, and a results-driven approach.",
+          "about-text": "E-Partners is a company that stands by your business at every stage, offering comprehensive 360-degree consulting solutions. We deliver highly specialized services in the fields of finance, marketing, law, human resources, information technology, procurement, and training. Our mission: To enhance our clients' competitive advantage and ensure sustainable growth by offering effective strategies tailored to their needs. Our core values: Professionalism, reliability, agility, and a results-driven approach.",
           "services-title": "Our Services",
           "service-law": "Law",
-          "service-law-desc": `
-        <ul>
-            <li>Corporate legal services</li>
-            <li>Preparation and legal analysis of contracts</li>
-            <li>Assistance in tax and customs procedures</li>
-            <li>Consulting services on labor and family legislation</li>
-            <li>Dispute resolution and management of legal risks</li>
-            <li>Licensing and liaison with government agencies</li>
-            <li>Representation in courts</li>
-        </ul>
-    `,
+          "service-law-desc": `<ul><li>Corporate legal services</li><li>Preparation and legal analysis of contracts</li><li>Assistance in tax and customs procedures</li><li>Consulting services on labor and family legislation</li><li>Dispute resolution and management of legal risks</li><li>Licensing and liaison with government agencies</li><li>Representation in courts</li></ul>`,
           "service-hr": "Human Resources",
-          "service-hr-desc": `
-        <ul>
-            <li>Recruitment and candidate selection</li>
-            <li>Performance management</li>
-            <li>Team motivation and leadership programs</li>
-            <li>HR Audit and organizational structuring</li>
-            <li>Preparation of internal procedures</li>
-        </ul>
-    `,
+          "service-hr-desc": `<ul><li>Recruitment and candidate selection</li><li>Performance management</li><li>Team motivation and leadership programs</li><li>HR Audit and organizational structuring</li><li>Preparation of internal procedures</li></ul>`,
           "service-procurement": "Procurement",
-          "service-procurement-desc": `
-        <ul>
-            <li>Selection of appropriate procurement tender</li>
-            <li>Preparation and uploading of compliance documents to the portal</li>
-            <li>Submission of relevant inquiries</li>
-            <li>Submission and tracking of complaints</li>
-            <li>Preparation of relevant allocation documents for joint activities</li>
-            <li>Contract preparation</li>
-        </ul>
-    `,
+          "service-procurement-desc": `<ul><li>Selection of appropriate procurement tender</li><li>Preparation and uploading of compliance documents to the portal</li><li>Submission of relevant inquiries</li><li>Submission and tracking of complaints</li><li>Preparation of relevant allocation documents for joint activities</li><li>Contract preparation</li></ul>`,
           "service-finance": "Finance",
-          "service-finance-desc": `
-        <ul>
-            <li>Budgeting and financial planning</li>
-            <li>Tax planning and audit</li>
-            <li>Investment and risk management</li>
-            <li>Analysis of financial statements</li>
-            <li>Establishment of control systems</li>
-            <li>Financial models for startups and SMEs</li>
-        </ul>
-    `,
+          "service-finance-desc": `<ul><li>Budgeting and financial planning</li><li>Tax planning and audit</li><li>Investment and risk management</li><li>Analysis of financial statements</li><li>Establishment of control systems</li><li>Financial models for startups and SMEs</li></ul>`,
           "service-marketing": "Marketing",
-          "service-marketing-desc": `
-        <ul>
-            <li>Marketing plan and strategy development</li>
-            <li>Brand development and positioning</li>
-            <li>Social media management and advertising campaigns</li>
-            <li>Content marketing and SEO services</li>
-            <li>Enhancing customer experience</li>
-            <li>Analytics and performance measurement</li>
-        </ul>
-    `,
+          "service-marketing-desc": `<ul><li>Marketing plan and strategy development</li><li>Brand development and positioning</li><li>Social media management and advertising campaigns</li><li>Content marketing and SEO services</li><li>Enhancing customer experience</li><li>Analytics and performance measurement</li></ul>`,
           "service-it": "IT",
-          "service-it-desc": `
-        <ul>
-            <li>IT strategy and transformation services</li>
-            <li>System integration and infrastructure building</li>
-            <li>Cybersecurity solutions</li>
-            <li>Cloud technologies and data management</li>
-            <li>Software and automation solutions</li>
-            <li>Technical audit and IT risk assessment</li>
-        </ul>
-    `,
+          "service-it-desc": `<ul><li>IT strategy and transformation services</li><li>System integration and infrastructure building</li><li>Cybersecurity solutions</li><li>Cloud technologies and data management</li><li>Software and automation solutions</li><li>Technical audit and IT risk assessment</li></ul>`,
           "why-title": "Why Choose Us",
           "benefit1-title": "Agile & Reliable",
-          "benefit1-desc":
-            "We adapt quickly to changing conditions while maintaining consistent quality and performance.",
+          "benefit1-desc": "We adapt quickly to changing conditions while maintaining consistent quality and performance.",
           "benefit2-title": "Industry Experience",
-          "benefit2-desc":
-            "Our team brings decades of combined experience across multiple industries and sectors.",
+          "benefit2-desc": "Our team brings decades of combined experience across multiple industries and sectors.",
           "benefit3-title": "Tailored Solutions",
-          "benefit3-desc":
-            "We create customized strategies that address your unique challenges and opportunities.",
+          "benefit3-desc": "We create customized strategies that address your unique challenges and opportunities.",
           "benefit4-title": "Client-Focused Approach",
-          "benefit4-desc":
-            "Your success is our priority. We build lasting partnerships based on trust and results.",
+          "benefit4-desc": "Your success is our priority. We build lasting partnerships based on trust and results.",
           "benefit5-title": "Innovation & Technology",
-          "benefit5-desc":
-            "We prepare your business for the future with the latest technologies and innovative solutions.",
+          "benefit5-desc": "We prepare your business for the future with the latest technologies and innovative solutions.",
           "benefit6-title": "24/7 Support",
-          "benefit6-desc":
-            "We are always by your side and ready to answer your questions.",
-          "footer-desc":
-            "Delivering integrated business solutions that drive success and growth.",
+          "benefit6-desc": "We are always by your side and ready to answer your questions.",
+          "footer-desc": "Delivering integrated business solutions that drive success and growth.",
           "footer-links": "Quick Links",
           "footer-contact": "Contact",
           "footer-copyright": "© 2025 E-Partners. All Rights Reserved.",
@@ -1528,107 +1411,51 @@
           "nav-why": "Почему выбирают нас",
           "nav-contact": "Контакты",
           "hero-title": [
-            "Упрощайте. Разрабатывайте стратегию. Преуспевайте.",
-            "Инновационные решения, формирующие будущее",
-            "От данных к ценности: аналитический подход",
-            "Конкурентное преимущество с эффективными стратегиями",
-            "Надежное партнерство для вашего бизнеса",
-            "Ускорение роста с помощью технологий",
+            "Правовая поддержка, надежное будущее",
+            "Правильная команда, успешный бизнес",
+            "Эффективные закупки, максимальная экономия",
+            "Обеспечьте рост с помощью финансовых решений",
+            "Поднимите ваш бренд на цифровые вершины",
+            "Будьте впереди с технологическим преимуществом",
           ],
-          "hero-text":
-            "Мы предоставляем умные, интегрированные решения в области ИТ, маркетинга, права, финансов и закупок.",
+          "hero-text": [
+              "Мы защищаем ваш бизнес от юридических рисков, гарантируя полное соответствие законодательству.",
+              "Мы помогаем эффективно управлять самым ценным активом вашей компании – человеческими ресурсами.",
+              "Мы оптимизируем вашу цепь поставок, сокращая расходы и повышая эффективность.",
+              "С помощью правильных финансовых стратегий мы обеспечиваем финансовое здоровье и устойчивый доход вашей компании.",
+              "Мы предлагаем креативные маркетинговые стратегии для достижения вашей целевой аудитории и увеличения продаж.",
+              "С помощью цифровой трансформации мы модернизируем ваши бизнес-процессы и повышаем конкурентоспособность."
+          ],
           "hero-button": "Работать с нами",
           "about-title": "О нас",
-          "about-text":
-            "E-Partners — это компания, которая сопровождает ваш бизнес на всех этапах, предоставляя комплексные консалтинговые решения в формате 360 градусов. Мы предлагаем высокоспециализированные услуги в областях финансов, маркетинга, права, управления персоналом, информационных технологий, закупок и обучения. Наша цель: Повышать конкурентоспособность наших клиентов и обеспечивать их устойчивое развитие за счёт эффективных стратегий. Наши ценности: Профессионализм, надёжность, гибкость и ориентация на результат.",
+          "about-text": "E-Partners — это компания, которая сопровождает ваш бизнес на всех этапах, предоставляя комплексные консалтинговые решения в формате 360 градусов. Мы предлагаем высокоспециализированные услуги в областях финансов, маркетинга, права, управления персоналом, информационных технологий, закупок и обучения. Наша цель: Повышать конкурентоспособность наших клиентов и обеспечивать их устойчивое развитие за счёт эффективных стратегий. Наши ценности: Профессионализм, надёжность, гибкость и ориентация на результат.",
           "services-title": "Наши услуги",
           "service-law": "Право",
-          "service-law-desc": `
-        <ul>
-            <li>Корпоративные юридические услуги</li>
-            <li>Разработка и юридический анализ договоров</li>
-            <li>Помощь в налоговых и таможенных процедурах</li>
-            <li>Консультационные услуги по трудовому и семейному законодательству</li>
-            <li>Разрешение споров и управление юридическими рисками</li>
-            <li>Лицензирование и взаимодействие с государственными органами</li>
-            <li>Представительство в судах</li>
-        </ul>
-    `,
+          "service-law-desc": `<ul><li>Корпоративные юридические услуги</li><li>Разработка и юридический анализ договоров</li><li>Помощь в налоговых и таможенных процедурах</li><li>Консультационные услуги по трудовому и семейному законодательству</li><li>Разрешение споров и управление юридическими рисками</li><li>Лицензирование и взаимодействие с государственными органами</li><li>Представительство в судах</li></ul>`,
           "service-hr": "Человеческие ресурсы",
-          "service-hr-desc": `
-        <ul>
-            <li>Подбор и отбор кандидатов</li>
-            <li>Управление эффективностью</li>
-            <li>Программы мотивации команды и лидерства</li>
-            <li>HR-аудит и построение структуры</li>
-            <li>Разработка внутренних процедур</li>
-        </ul>
-    `,
+          "service-hr-desc": `<ul><li>Подбор и отбор кандидатов</li><li>Управление эффективностью</li><li>Программы мотивации команды и лидерства</li><li>HR-аудит и построение структуры</li><li>Разработка внутренних процедур</li></ul>`,
           "service-procurement": "Закупки",
-          "service-procurement-desc": `
-        <ul>
-            <li>Выбор подходящего тендера на закупку</li>
-            <li>Подготовка и загрузка документов соответствия на портал</li>
-            <li>Направление соответствующих запросов</li>
-            <li>Подача и отслеживание жалоб</li>
-            <li>Подготовка соответствующих документов о распределении для совместной деятельности</li>
-            <li>Подготовка договора</li>
-        </ul>
-    `,
+          "service-procurement-desc": `<ul><li>Выбор подходящего тендера на закупку</li><li>Подготовка и загрузка документов соответствия на портал</li><li>Направление соответствующих запросов</li><li>Подача и отслеживание жалоб</li><li>Подготовка соответствующих документов о распределении для совместной деятельности</li><li>Подготовка договора</li></ul>`,
           "service-finance": "Финансы",
-          "service-finance-desc": `
-        <ul>
-            <li>Бюджетирование и финансовое планирование</li>
-            <li>Налоговое планирование и аудит</li>
-            <li>Управление инвестициями и рисками</li>
-            <li>Анализ финансовой отчетности</li>
-            <li>Создание систем контроля</li>
-            <li>Финансовые модели для стартапов и МСП</li>
-        </ul>
-    `,
+          "service-finance-desc": `<ul><li>Бюджетирование и финансовое планирование</li><li>Налоговое планирование и аудит</li><li>Управление инвестициями и рисками</li><li>Анализ финансовой отчетности</li><li>Создание систем контроля</li><li>Финансовые модели для стартапов и МСП</li></ul>`,
           "service-marketing": "Маркетинг",
-          "service-marketing-desc": `
-        <ul>
-            <li>Разработка маркетинговых планов и стратегий</li>
-            <li>Развитие бренда и позиционирование</li>
-            <li>Управление социальными сетями и рекламные кампании</li>
-            <li>Контент-маркетинг и SEO-услуги</li>
-            <li>Улучшение клиентского опыта</li>
-            <li>Аналитика и измерение эффективности</li>
-        </ul>
-    `,
+          "service-marketing-desc": `<ul><li>Разработка маркетинговых планов и стратегий</li><li>Развитие бренда и позиционирование</li><li>Управление социальными сетями и рекламные кампании</li><li>Контент-маркетинг и SEO-услуги</li><li>Улучшение клиентского опыта</li><li>Аналитика и измерение эффективности</li></ul>`,
           "service-it": "ИТ",
-          "service-it-desc": `
-        <ul>
-            <li>Услуги по ИТ-стратегии и трансформации</li>
-            <li>Системная интеграция и создание инфраструктуры</li>
-            <li>Решения по кибербезопасности</li>
-            <li>Облачные технологии и управление данными</li>
-            <li>Программное обеспечение и решения для автоматизации</li>
-            <li>Технический аудит и оценка ИТ-рисков</li>
-        </ul>
-    `,
+          "service-it-desc": `<ul><li>Услуги по ИТ-стратегии и трансформации</li><li>Системная интеграция и создание инфраструктуры</li><li>Решения по кибербезопасности</li><li>Облачные технологии и управление данными</li><li>Программное обеспечение и решения для автоматизации</li><li>Технический аудит и оценка ИТ-рисков</li></ul>`,
           "why-title": "Почему выбирают нас",
           "benefit1-title": "Гибкость и надежность",
-          "benefit1-desc":
-            "Мы быстро адаптируемся к изменяющимся условиям, поддерживая стабильное качество и производительность.",
+          "benefit1-desc": "Мы быстро адаптируемся к изменяющимся условиям, поддерживая стабильное качество и производительность.",
           "benefit2-title": "Отраслевой опыт",
-          "benefit2-desc":
-            "Наша команда объединяет десятилетия совместного опыта в различных отраслях и секторах.",
+          "benefit2-desc": "Наша команда объединяет десятилетия совместного опыта в различных отраслях и секторах.",
           "benefit3-title": "Индивидуальные решения",
-          "benefit3-desc":
-            "Мы создаем индивидуальные стратегии, которые решают ваши уникальные проблемы и возможности.",
+          "benefit3-desc": "Мы создаем индивидуальные стратегии, которые решают ваши уникальные проблемы и возможности.",
           "benefit4-title": "Клиентоориентированный подход",
-          "benefit4-desc":
-            "Ваш успех - наш приоритет. Мы строим долгосрочные партнерские отношения на основе доверия и результатов.",
+          "benefit4-desc": "Ваш успех - наш приоритет. Мы строим долгосрочные партнерские отношения на основе доверия и результатов.",
           "benefit5-title": "Инновации и технологии",
-          "benefit5-desc":
-            "Мы готовим ваш бизнес к будущему с помощью новейших технологий и инновационных решений.",
+          "benefit5-desc": "Мы готовим ваш бизнес к будущему с помощью новейших технологий и инновационных решений.",
           "benefit6-title": "Поддержка 24/7",
-          "benefit6-desc":
-            "Мы всегда рядом с вами и готовы ответить на ваши вопросы.",
-          "footer-desc":
-            "Предоставление интегрированных бизнес-решений, которые обеспечивают успех и рост.",
+          "benefit6-desc": "Мы всегда рядом с вами и готовы ответить на ваши вопросы.",
+          "footer-desc": "Предоставление интегрированных бизнес-решений, которые обеспечивают успех и рост.",
           "footer-links": "Быстрые ссылки",
           "footer-contact": "Контакты",
           "footer-copyright": "© 2025 E-Partners. Все права защищены.",
@@ -1639,9 +1466,11 @@
 
       // Hero Slider Script
       document.addEventListener("DOMContentLoaded", function () {
-        function updateHeroTitle() {
-            if (heroTitleElement) {
+        // DƏYİŞİKLİK: Funksiyanın adı və məzmunu həm başlığı, həm də mətni yeniləmək üçün dəyişdirildi
+        function updateHeroContent() {
+            if (heroTitleElement && heroTextElement) {
                 heroTitleElement.textContent = translations[currentLanguage]["hero-title"][currentSlide];
+                heroTextElement.textContent = translations[currentLanguage]["hero-text"][currentSlide];
             }
         }
         
@@ -1649,11 +1478,11 @@
           slides[currentSlide].classList.remove("active");
           currentSlide = (currentSlide + 1) % slides.length;
           slides[currentSlide].classList.add("active");
-          updateHeroTitle();
+          updateHeroContent();
         }
         
-        // Initial title set
-        updateHeroTitle();
+        // Səhifə ilk dəfə yüklənəndə məzmunu təyin et
+        updateHeroContent();
 
         setInterval(nextSlide, slideInterval);
       });
@@ -1690,7 +1519,8 @@
         elements.forEach((element) => {
           const key = element.getAttribute("data-key");
           if (translations[lang] && translations[lang][key]) {
-            if(key === 'hero-title') {
+            // DƏYİŞİKLİK: hero-title və hero-text üçün dinamik yeniləmə
+            if(key === 'hero-title' || key === 'hero-text') {
                 element.textContent = translations[lang][key][currentSlide];
             } else if (element.classList.contains("hexagon-description")) {
               element.innerHTML = translations[lang][key];
